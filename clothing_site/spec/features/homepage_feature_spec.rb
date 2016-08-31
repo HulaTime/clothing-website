@@ -1,8 +1,16 @@
 feature 'Landing Page' do
 
 	context 'Categories' do
-		scenario 'there should be 6 total'do
+		before do
 			visit '/'
+		end
+
+		scenario 'there should be a link to a page displaying all categories' do
+			click_link 'Categories'
+			expect(current_path).to eq '/categories'
+		end
+		
+		scenario 'there should be 6 for male and female clothing'do
 			expect(page).to have_link 'Women’s footwear'
 			expect(page).to have_link 'Men’s footwear'
 			expect(page).to have_link 'Women’s casualwear'
