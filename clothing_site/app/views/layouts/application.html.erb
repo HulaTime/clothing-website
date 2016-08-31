@@ -18,7 +18,14 @@
       <%= link_to "Sign in", new_user_session_path %>
       <%= link_to "Sign up", new_user_registration_path %>
     <% end %>
-    
+
+    <%= link_to 'Women’s footwear', class: 'categories' %>
+    <%= link_to 'Men’s footwear', class: 'categories' %>
+    <%= link_to 'Women’s casualwear', class: 'categories' %>
+    <%= link_to 'Men’s casualwear', class: 'categories' %>
+    <%= link_to 'Women’s formalwear', class: 'categories' %>
+    <%= link_to 'Men’s formalwear', class: 'categories' %>
+
     <%= yield %>
   </body>
 </html>
