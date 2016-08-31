@@ -1,1 +1,3 @@
-# clothing-website
+# Clothing Website
+
+by Max Provin
