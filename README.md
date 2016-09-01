@@ -1,8 +1,24 @@
 # Clothing Website
 
-set up Rails using postgresql and rails 
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-added rspec rails and capybara gem to test group
-bundle
+Things you may want to cover:
 
-by Max Provin
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
