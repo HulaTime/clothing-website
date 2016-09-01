@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 	
 	get 'home' => 'home#index'
 
-	resources :categories
+	resources :categories, only: [:index] do
+		get 'mens_footwear' => 'mens_footwear#index'
+		# resources :mens_footwear, only: [:index]
+	end
 
 end
