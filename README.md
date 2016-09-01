@@ -1,3 +1,5 @@
+https://travis-ci.org/MaxProvin/clothing-website.svg?branch=master
+
 # Clothing Website
 
 This README would normally document whatever steps are necessary to get the
