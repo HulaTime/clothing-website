@@ -19,6 +19,8 @@
       <%= link_to "Sign up", new_user_registration_path %>
     <% end %>
 
+    <%= link_to 'Clothing', clothing_index_path, class: 'clothing_head' %>
+
     <% unless @categories_page %>
       <%= link_to 'Categories', categories_path, class: 'categories_head' %>
       <%= link_to "Women's footwear", class: 'categories' %>

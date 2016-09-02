@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 		# resources :mens_footwear, only: [:index]
 	end
 
+	resources :clothing
+
 end
