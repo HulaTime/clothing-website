@@ -1,0 +1,9 @@
+<% @cart.each do |c| %>
+	<%= c.item %>
+	<%= c.colour %>
+	£<%= c.price %>
+	<%= c.quantity %>
+	<% a = c.quantity.to_i %>
+	<% b = c.price.to_f %>
+	Total: £<%= sprintf('%.2f', a*b) %>
+<% end %>

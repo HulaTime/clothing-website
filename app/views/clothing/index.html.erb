@@ -4,12 +4,12 @@
 		
 		<%= form_for @cart, url:{controller: 'cart', action: "create"} do |f| %>
 		  <%= f.hidden_field :item, :value => c.item %>
+		  <%= f.hidden_field :colour, :value => c.colour %>
 		  <input max="99" min="1" name="quantity" type="number" />
 		  <%= f.hidden_field :price, :value => c.price %>
 		  <%= f.submit "Add to cart" %>
 		<% end %>
 	</div>
-
 <% end %>
 
 
