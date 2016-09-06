@@ -13,6 +13,9 @@ class CartController < ApplicationController
 	end
 
 	def destroy
+		@d_item = Cart.find(params[:id])
+    @d_item.destroy
+    flash[:notice] = 'Item removed'
 		redirect_to cart_index_path
 	end
 
