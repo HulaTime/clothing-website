@@ -2,14 +2,14 @@ feature 'Shopping Cart' do
 	before do
 		item1 = create(:clothing)
 		visit clothing_index_path
+		fill_in(:quantity, with: 2)
+		click_button 'Add to cart'
 	end
 	scenario 'button should be displayed on all pages' do
 		expect(page).to have_link 'View Shopping Cart'
 	end
 
 	scenario 'should display all items added with order cost' do
-		fill_in(:quantity, with: 2)
-		click_button 'Add to cart'
 		click_link 'View Shopping Cart'
 		expect(current_path).to eq cart_index_path
 		expect(page).to have_content 'Almond Toe Court Shoes'
@@ -17,5 +17,12 @@ feature 'Shopping Cart' do
 		expect(page).to have_content '£99.00'
 		expect(page).to have_content '2'
 		expect(page).to have_content 'Total: £198.00'
+	end
+
+	scenario 'can remove items 1 at a time via a link/button' do
+		click_link 'View Shopping Cart'
+		click_link 'Remove Item'
+		expect(current_path).to eq cart_index_path
+		expect(page).not_to have_content '2'
 	end
 end

@@ -12,6 +12,10 @@ class CartController < ApplicationController
 		redirect_to clothing_index_path
 	end
 
+	def destroy
+		redirect_to cart_index_path
+	end
+
 	private
 
 	def cart_params

@@ -6,4 +6,5 @@
 	<% a = c.quantity.to_i %>
 	<% b = c.price.to_f %>
 	Total: £<%= sprintf('%.2f', a*b) %>
+	<%= link_to 'Remove Item', cart_path(c), method: :delete %>
 <% end %>
