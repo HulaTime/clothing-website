@@ -1,5 +1,6 @@
 feature 'Shopping Cart' do
 	before do
+		sign_user_up
 		item1 = create(:clothing)
 		visit clothing_index_path
 		fill_in(:quantity, with: 2)
