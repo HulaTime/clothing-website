@@ -12,25 +12,42 @@
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <% if user_signed_in? %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign in", new_user_session_path %>
-      <%= link_to "Sign up", new_user_registration_path %>
-    <% end %>
-
-    <%= link_to 'Clothing', clothing_index_path, class: 'clothing_head' %>
-
-    <%= link_to 'View Shopping Cart', cart_index_path, class: 'cart_head' %>
-
     <% unless @categories_page %>
-      <%= link_to 'Categories', categories_path, class: 'categories_head' %>
-      <%= link_to "Women's Footwear", '/clothing/women/footwear', class: 'categories_main' %>
-      <%= link_to "Men's Footwear", '/clothing/men/footwear', class: 'categories_main' %>
-      <%= link_to "Women's Casualwear", '/clothing/women/casualwear', class: 'categories_main' %>
-      <%= link_to "Men's Casualwear", '/clothing/men/casualwear', class: 'categories_main' %>
-      <%= link_to "Women's Formalwear", '/clothing/women/formalwear', class: 'categories_main' %>
-      <%= link_to "Men's Formalwear", '/clothing/men/formalwear', class: 'categories_main' %>
+      <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><%= link_to 'Clothing', clothing_index_path %></li>
+        <li>
+          <%= link_to 'Categories', categories_path %>
+          <ul>
+            <li>
+              <%= link_to "Women's Footwear", '/clothing/women/footwear' %>
+            </li>
+            <li>
+              <%= link_to "Men's Footwear", '/clothing/men/footwear' %>
+            </li>
+            <li>
+              <%= link_to "Women's Casualwear", '/clothing/women/casualwear' %>
+            </li>
+            <li>
+              <%= link_to "Men's Casualwear", '/clothing/men/casualwear' %>
+            </li>
+            <li>
+              <%= link_to "Women's Formalwear", '/clothing/women/formalwear' %>
+            </li>
+            <li>
+              <%= link_to "Men's Formalwear", '/clothing/men/formalwear' %>
+            </li>
+          </ul>
+        </li>
+        <li><%= link_to 'Shopping Cart', cart_index_path %></li>
+        
+        <% if user_signed_in? %>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <% end %>
+      </ul>
     <% end %>
 
     <%= yield %>

@@ -6,11 +6,11 @@ feature 'Shopping Cart' do
 		click_button 'Add to cart'
 	end
 	scenario 'button should be displayed on all pages' do
-		expect(page).to have_link 'View Shopping Cart'
+		expect(page).to have_link 'Shopping Cart'
 	end
 
 	scenario 'should display all items added with order cost' do
-		click_link 'View Shopping Cart'
+		click_link 'Shopping Cart'
 		expect(current_path).to eq cart_index_path
 		expect(page).to have_content 'Almond Toe Court Shoes'
 		expect(page).to have_content 'Patent Black'
@@ -20,7 +20,7 @@ feature 'Shopping Cart' do
 	end
 
 	scenario 'can remove items 1 at a time via a link/button' do
-		click_link 'View Shopping Cart'
+		click_link 'Shopping Cart'
 		click_link 'Remove Item'
 		expect(current_path).to eq cart_index_path
 		expect(page).not_to have_content '2'
