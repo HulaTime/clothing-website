@@ -48,6 +48,7 @@
 		border-right: 1px solid #222;
     box-shadow: 1px 0 0 #444;
     position: relative;
+    border-radius: 6px;
 }
 
 #menu li {
