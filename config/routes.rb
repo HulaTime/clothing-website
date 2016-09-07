@@ -6,10 +6,28 @@ Rails.application.routes.draw do
 	
 	get 'home' => 'home#index'
 
-	resources :categories, only: [:index] do
-	end
+	resources :categories, only: [:index]
 
 	resources :clothing
+
+	namespace :clothing do
+		resources :women, :men, only: [:index]
+	end
+
+	scope "/clothing" do
+	  scope "/women" do
+	    resources :footwear, :casualwear, :formalwear, only: [:index] do
+	    end
+	  end
+	end
+
+	scope "/clothing" do
+	  scope "/men" do
+	    resources :footwear, :casualwear, :formalwear, only: [:index] do
+	    end
+	  end
+	end
+		
 	resources :cart
 
 end
