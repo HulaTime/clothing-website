@@ -13,8 +13,9 @@ class CartController < ApplicationController
 	end
 
 	def destroy
-		@d_item = Cart.find(params[:id])
-    @d_item.destroy
+		d_item = Cart.find(params[:id])
+    d_item.destroy if d_item.quantity == 1
+    d_item.update(quantity: d_item.quantity - 1) if d_item.quantity > 1
     flash[:notice] = 'Item removed'
 		redirect_to cart_index_path
 	end

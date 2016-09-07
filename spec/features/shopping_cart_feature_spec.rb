@@ -24,5 +24,6 @@ feature 'Shopping Cart' do
 		click_link 'Remove Item'
 		expect(current_path).to eq cart_index_path
 		expect(page).not_to have_content '2'
+		expect(page).to have_content '1'
 	end
 end
