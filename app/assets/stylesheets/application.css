@@ -43,6 +43,13 @@
     zoom:1;
 }
 
+#menu span {
+		float: right;
+		border-right: 1px solid #222;
+    box-shadow: 1px 0 0 #444;
+    position: relative;
+}
+
 #menu li {
     float: left;
     border-right: 1px solid #222;
