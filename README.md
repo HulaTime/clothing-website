@@ -1,26 +1,12 @@
-https://travis-ci.org/MaxProvin/clothing-website.svg?branch=master
+[![Build Status](https://travis-ci.org/MaxProvin/clothing-website.svg?branch=master)](https://travis-ci.org/MaxProvin/clothing-website)
+
+[![Coverage Status](https://coveralls.io/repos/github/MaxProvin/clothing-website/badge.svg?branch=master)](https://coveralls.io/github/MaxProvin/clothing-website?branch=master)
 
 # Clothing Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Installation Instructions
 
-Things you may want to cover:
+* Clone the repo to your machine `git clone https://github.com/MaxProvin/clothing-website.git`
+* `bundle`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Built with Rails, Rspec, PostgreSql, Factory Girl and Devise.
