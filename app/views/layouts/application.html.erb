@@ -25,12 +25,12 @@
 
     <% unless @categories_page %>
       <%= link_to 'Categories', categories_path, class: 'categories_head' %>
-      <%= link_to "Women's footwear", class: 'categories' %>
-      <%= link_to "Men's footwear", class: 'categories' %>
-      <%= link_to "Women's casualwear", class: 'categories' %>
-      <%= link_to "Men's casualwear", class: 'categories' %>
-      <%= link_to "Women's formalwear", class: 'categories' %>
-      <%= link_to "Men's formalwear", class: 'categories' %>
+      <%= link_to "Women's Footwear", '/clothing/women/footwear', class: 'categories_main' %>
+      <%= link_to "Men's Footwear", '/clothing/men/footwear', class: 'categories_main' %>
+      <%= link_to "Women's Casualwear", '/clothing/women/casualwear', class: 'categories_main' %>
+      <%= link_to "Men's Casualwear", '/clothing/men/casualwear', class: 'categories_main' %>
+      <%= link_to "Women's Formalwear", '/clothing/women/formalwear', class: 'categories_main' %>
+      <%= link_to "Men's Formalwear", '/clothing/men/formalwear', class: 'categories_main' %>
     <% end %>
 
     <%= yield %>

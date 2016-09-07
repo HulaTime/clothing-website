@@ -11,12 +11,12 @@ feature 'Landing Page' do
 		end
 		
 		scenario 'there should be 6 for male and female clothing'do
-			expect(page).to have_link "Women's footwear"
-			expect(page).to have_link "Men's footwear"
-			expect(page).to have_link "Women's casualwear"
-			expect(page).to have_link "Men's casualwear"
-			expect(page).to have_link "Women's formalwear"
-			expect(page).to have_link "Men's formalwear"
+			expect(page).to have_link "Women's Footwear"
+			expect(page).to have_link "Men's Footwear"
+			expect(page).to have_link "Women's Casualwear"
+			expect(page).to have_link "Men's Casualwear"
+			expect(page).to have_link "Women's Formalwear"
+			expect(page).to have_link "Men's Formalwear"
 		end
 	end
 
