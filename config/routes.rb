@@ -8,26 +8,12 @@ Rails.application.routes.draw do
 
 	resources :categories, only: [:index]
 
-	resources :clothing
-
-	namespace :clothing do
-		resources :women, :men, only: [:index]
-	end
+	resources :clothing, only: [:index]
 
 	scope "/clothing" do
-	  scope "/women" do
-	    resources :footwear, :casualwear, :formalwear, only: [:index] do
-	    end
-	  end
+	  resources :footwear, :casualwear, :formalwear, only: [:index]
 	end
 
-	scope "/clothing" do
-	  scope "/men" do
-	    resources :footwear, :casualwear, :formalwear, only: [:index] do
-	    end
-	  end
-	end
-		
 	resources :cart
 
 end

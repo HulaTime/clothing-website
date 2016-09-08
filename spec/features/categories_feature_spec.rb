@@ -4,21 +4,19 @@ feature 'Categories' do
   end
 
 	scenario 'should display links to available categories' do
-		expect(page).to have_link "Women's Footwear"
-		expect(page).to have_link "Men's Footwear"
-		expect(page).to have_link "Women's Casualwear"
-		expect(page).to have_link "Men's Casualwear"
-		expect(page).to have_link "Women's Formalwear"
-		expect(page).to have_link "Men's Formalwear"
+		expect(page).to have_link "Footwear"
+		expect(page).to have_link "Casualwear"
+		expect(page).to have_link "Formalwear"
 	end
 
 	scenario 'links should redirect to the correct category' do
-		click_link "Women's Footwear"
-		expect(current_path).to eq '/clothing/women/footwear'
+		click_link "Footwear"
+		expect(current_path).to eq '/clothing/footwear'
 		visit categories_path
-		click_link "Men's Casualwear"
-		expect(current_path).to eq '/clothing/men/casualwear'
-		click_link "Women's Formalwear"
-		expect(current_path).to eq '/clothing/women/formalwear'
+		click_link "Casualwear"
+		expect(current_path).to eq '/clothing/casualwear'
+		visit categories_path
+		click_link "Formalwear"
+		expect(current_path).to eq '/clothing/formalwear'
 	end
 end
