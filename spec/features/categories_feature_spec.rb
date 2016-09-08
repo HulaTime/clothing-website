@@ -18,5 +18,7 @@ feature 'Categories' do
 		visit categories_path
 		click_link "Men's Casualwear"
 		expect(current_path).to eq '/clothing/men/casualwear'
+		click_link "Women's Formalwear"
+		expect(current_path).to eq '/clothing/women/formalwear'
 	end
 end

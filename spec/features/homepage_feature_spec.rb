@@ -18,23 +18,19 @@ feature 'Landing Page' do
 			expect(page).to have_link "Women's Formalwear"
 			expect(page).to have_link "Men's Formalwear"
 		end
-	end
 
-	context 'when user is not signed in' do
-		scenario 'should not redirect to user homepage' do 
-			visit '/'
-			expect(current_path).to eq '/'
-		end
-	end
-
-	context 'when user is signed in' do
-		before do
-			sign_user_up
+		context 'when user is not signed in' do
+			scenario 'should not redirect to user homepage' do 
+				visit '/'
+				expect(current_path).to eq '/'
+			end
 		end
 
-		scenario 'should direct to user homepage' do 
-			expect(current_path).to eq '/home'
+		context 'when user is signed in' do
+			scenario 'should direct to user homepage' do
+				sign_user_up
+				expect(current_path).to eq '/home'
+			end
 		end
 	end
-
 end

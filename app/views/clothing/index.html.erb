@@ -1,6 +1,15 @@
 <% @clothing.each do |c| %>
 	<div class='clothing-display'>
-		<p> <%= c.item %>, <%= c.colour %> </p>
+		<p> <%= c.item %> </p>
+		<p> colour: <%= c.colour %> </p>
+		<p> £<%= c.price %> </p>
+		<p> 
+			<% if c.quantity == 0 %>
+				Out of stock
+			<% else %>
+				<%= c.quantity %> in stock
+			<% end %>
+		</p>
 		
 		<%= form_for @cart, url:{controller: 'cart', action: "create"} do |f| %>
 		  <%= f.hidden_field :item, :value => c.item %>
